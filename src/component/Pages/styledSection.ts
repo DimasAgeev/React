@@ -4,7 +4,7 @@ export const Section = styled.section`
   display: flex;
   margin-top: 60px;
   background: url(${background});
-  min-height: 90vh;
+  min-height: 92vh;
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;

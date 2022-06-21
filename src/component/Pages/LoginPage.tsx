@@ -9,9 +9,12 @@ import { Container } from "../Pages/styledContainer";
 import { TextContent } from "../../component/text/ContentText";
 import { TextHeder } from "../../component/text/HederText";
 import { Inp } from "../input/input";
-import { LoginBtn } from "../button/LoginBtn";
 import { Section } from "./styledSection";
-export const LoginPage = () => {
+import { Btn } from "../button/Btn";
+export const LoginPage = ({ setIsLogIn }: any) => {
+  const logIn = () => {
+    setIsLogIn(true);
+  };
   return (
     <Section>
       <Container>
@@ -23,7 +26,7 @@ export const LoginPage = () => {
             <LoginContent>
               <Inp label="Email"></Inp>
               <Inp label="Password"></Inp>
-              <LoginBtn></LoginBtn>
+              <Btn title="Login" click={logIn}></Btn>
             </LoginContent>
             <LoginFontter>
               <TextContent content="Fogot your password? Reset password"></TextContent>

@@ -1,4 +1,4 @@
 import { Button } from "./styled";
-export const Btn = (props) => {
-  return <Button>{props.title}</Button>;
-};
+export function Btn({ title, click }) {
+  return <Button onClick={click}>{title}</Button>;
+}
