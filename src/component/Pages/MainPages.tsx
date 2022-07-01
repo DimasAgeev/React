@@ -2,7 +2,9 @@ import { LearnMoreBtn } from "../button/LearnMoreBtn";
 import { Section } from "../Pages/styledSection";
 import { Container } from "../Pages/styledContainer";
 import { TextContent } from "../../component/text/ContentText";
+import { Outlet, useNavigate } from "react-router-dom";
 import { TextHeder } from "../../component/text/HederText";
+import { Btn } from "../button/Btn";
 import {
   MainConteiner,
   Main,
@@ -10,6 +12,7 @@ import {
   MainContent,
 } from "../Pages/styledMainPage";
 export const MainPage = () => {
+  const navigate = useNavigate();
   return (
     <Section>
       <Container>
@@ -24,10 +27,16 @@ export const MainPage = () => {
 To create a production build, use npm run build."
               ></TextContent>
             </MainContent>
-            <LearnMoreBtn></LearnMoreBtn>
+            <Btn
+              title="Learn More"
+              click={() => {
+                navigate("information");
+              }}
+            ></Btn>
           </Main>
         </MainConteiner>
       </Container>
+      <Outlet />
     </Section>
   );
 };

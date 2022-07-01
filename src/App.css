@@ -13,4 +13,18 @@ iframe {
 }
 * button {
   cursor: pointer;
+  color: none;
+}
+::-webkit-scrollbar {
+  width: 0.2rem;
+  background-color: rgba(187, 205, 228, 0.607);
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 209, 209, 0.749);
+  border-radius: 1rem;
+  box-shadow: inset 1px 1px 5px #f3faf7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #95b1c1;
 }

@@ -1,3 +1,5 @@
+import { Btn } from "../button/Btn";
+import { useNavigate } from "react-router-dom";
 import {
   ConfirmationConteiner,
   ConfirmationContent,
@@ -11,6 +13,7 @@ import { TextHeder } from "../text/HederText";
 import { HomeBtn } from "../button/HomeBtn";
 import { Section } from "./styledSection";
 export const ConfirmationPage = () => {
+  const navigate = useNavigate();
   return (
     <Section>
       <Container>
@@ -26,7 +29,12 @@ export const ConfirmationPage = () => {
               ></TextContent>
             </ConfirmationDetailContent>
             <ConfirmationFootter>
-              <HomeBtn></HomeBtn>
+              <Btn
+                title="Home"
+                click={() => {
+                  navigate("/");
+                }}
+              ></Btn>
             </ConfirmationFootter>
           </ConfirmationContent>
         </ConfirmationConteiner>

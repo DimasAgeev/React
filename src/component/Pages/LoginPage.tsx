@@ -11,6 +11,7 @@ import { TextHeder } from "../../component/text/HederText";
 import { Inp } from "../input/input";
 import { Section } from "./styledSection";
 import { Btn } from "../button/Btn";
+import { Outlet } from "react-router-dom";
 export const LoginPage = ({ setIsLogIn }: any) => {
   const logIn = () => {
     setIsLogIn(true);

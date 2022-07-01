@@ -1,4 +1,4 @@
-import { PostCardProps } from "./types";
+import { PostType } from "./types";
 
 import {
   PostContentContainer,
@@ -6,14 +6,15 @@ import {
   PostTitle,
   PostContent,
   PostFooter,
-} from "./styled";
-export function PostCard({ post }: PostCardProps) {
+  PostContentText,
+} from "./styledPostCard";
+export function PostCard({ postImage, postText, postDate }: PostType) {
   return (
     <PostContentContainer>
-      {post.image ? <PostImage src={post.image} /> : null}
-      <PostTitle>{post.title}</PostTitle>
-      <PostContent>{post.text}</PostContent>
-      <PostFooter>{post.date}</PostFooter>
+      {postImage ? <PostImage src={postImage} /> : null}
+      <PostFooter>{postDate}</PostFooter>
+      <PostContentText>{postText}</PostContentText>
+      <PostFooter>Тут будут иконки</PostFooter>
     </PostContentContainer>
   );
 }
